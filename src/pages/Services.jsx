@@ -1,4 +1,4 @@
-export default function Accueil() {
+export default function Services() {
     return (
         <main className="text-center py-5 px-2 mt-4">
 

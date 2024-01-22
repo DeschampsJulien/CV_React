@@ -1,4 +1,4 @@
-export default function Accueil() {
+export default function Mentions() {
     return (
         <main className="text-center py-5 px-4 mt-4">
 

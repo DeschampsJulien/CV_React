@@ -9,65 +9,38 @@ export default function Contact() {
 
             <div className="container">
                 <div className="row">
-
-                    <form>
+                    <form className="col-md-6">
+                        <h3>Formulaire de contact</h3>
+                        <hr /> 
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <input type="Nom" className="form-control my-3" placeholder="Votre nom"/>
+                            <input type="email" className="form-control my-3"  placeholder="Votre adresse email "/>
+                            <input type="Numéro" className="form-control my-3" placeholder="Votre numéro de téléphone"/>
+                            <input type="Sujet" className="form-control my-3" placeholder="Sujet"/>
+                            <textarea className="form-control my-3" placeholder="Votre message" rows="4"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-lg my-3">Envoyer</button>
                     </form>
 
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect2">Example multiple select</label>
-                            <select multiple class="form-control" id="exampleFormControlSelect2">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Example textarea</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                    </form>
-
-
-
-
+                    <article className="col-md-6">
+                        <h3>Mes coordonnées</h3>
+                        <hr />
+                        <address>
+                            <i className="fas fa-map-marker"></i> 62 Boulevard Victor Hugo 34110 Frontignan<br/>
+                            <i className="fas fa-mobile-alt"></i> 06 25 04 74 86<br/>
+                            <i className="far fa-envelope"></i> jdeschamps34@yahoo.fr
+                        </address>
+                        <iframe className="rounded"
+                            id="inlineFrameExample"
+                            title="Inline Frame Example"
+                            width="300"
+                            height="236"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+                        {/* https://www.openstreetmap.org/search?query=62%20boulevard%20victor%20hugo%2034110%20frontignan#map=18/43.44522/3.75502 */}
+                        </iframe>
+				    </article>
                 </div>
             </div>
-            
-        
-            
         </main>
-        
-
     );
 }

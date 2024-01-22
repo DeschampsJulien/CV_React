@@ -2,11 +2,15 @@
 
 .App {
   font-family: "Nunito", serif;
-  /* font-size: calc(10px + 2vmin); */
 }
 
 .App-header {
-  background-color: #1e1e1e;
+  background-color:#1e1e1e;
+}
+
+.App-footer {
+  background-color:#eee;
+  color: #444;
 }
 
 .App-logo {
@@ -15,8 +19,32 @@
 }
 
 .App-link {
-  width: 6vmin;
-  height: 6vmin;
+  width: 4vmin;
+  height: 4vmin;
+}
+
+.header-link {
+  color: #eee;
+  text-decoration: none;
+  margin-top: 16px;
+}
+
+.header-link:hover {
+  color: #0d6efd;
+}
+
+.footer-link {
+  color: #444;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #0d6efd;
+}
+
+iframe {
+  border: 1px solid black;
+  width: 100%; /* priorité sur la largeur définie avec l'attribut HTML width */
 }
 
 /* DEBUT ANIMATION LOGO */
@@ -36,9 +64,6 @@
 } 
 /* FIN ANIMATION LOGO */
 
-.App-footer {
-  background-color:#444;
-}
 
 
 

@@ -9,9 +9,11 @@ export default function Accueil() {
             <section className="section-header">
 
                 <TextClock /> 
-                <h1	className="titre text-uppercase mb-3 display-2">Julien Deschamps</h1>
-                <h2 className="sous-titre text-uppercase mb-4">Développeur web fullstack</h2>
+                
+                <h1	className="titre text-uppercase mb-3 display-1">Julien Deschamps</h1>
+                <h2 className="sous-titre text-uppercase mb-4 display-4">Développeur web fullstack</h2>
                 <a className="btn btn-primary btn-lg" href="#apropos">En savoir plus</a>
+                
             </section>
         
             <section id="apropos" className="text-center py-5 px-4 mt-4">

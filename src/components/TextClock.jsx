@@ -13,7 +13,7 @@ export default function TextClock() {
 
   return (
     <div>
-      <p className="fs-4 text-primary">
+      <p className="display-6">
         Nous sommes le&nbsp;
         <span>{currentDate.toLocaleDateString()}</span> et il est{" "}
         <span>{currentDate.toLocaleTimeString()}</span>
