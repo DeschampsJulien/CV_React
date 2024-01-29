@@ -4,56 +4,17 @@
   font-family: "Nunito", serif;
 }
 
-.App-header {
-  background-color:#1e1e1e;
-}
 
-.App-footer {
-  background-color:#eee;
-  color: #444;
-}
-
+/* DEBUT ANIMATION LOGO REACT HEADER */
 .App-logo {
   height: 5vmin;
   pointer-events: none;
 }
-
-.App-link {
-  width: 4vmin;
-  height: 4vmin;
-}
-
-.header-link {
-  color: #eee;
-  text-decoration: none;
-  margin-top: 16px;
-}
-
-.header-link:hover {
-  color: #0d6efd;
-}
-
-.footer-link {
-  color: #444;
-  text-decoration: none;
-}
-
-.footer-link:hover {
-  color: #0d6efd;
-}
-
-iframe {
-  border: 1px solid black;
-  width: 100%; /* priorité sur la largeur définie avec l'attribut HTML width */
-}
-
-/* DEBUT ANIMATION LOGO */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -62,7 +23,153 @@ iframe {
     transform: rotate(360deg);
   }
 } 
-/* FIN ANIMATION LOGO */
+/* FIN ANIMATION LOGO REACT HEADER */
+
+
+/* DEBUT ANIMATION LOGO ET LINK HEADER */
+.App-header-logo {
+  color: #eee;
+  text-decoration: none;
+  margin-top: 15px;
+}
+.App-header-logo:hover {
+  color: rgba(255,255,255,0.8)
+}
+.App-header-logo:focus {
+  animation: jello-horizontal 0.9s both;
+  color: gold;
+  transition: color 0.9s;
+}
+
+.App-header-link{
+  color: #eee;
+  text-decoration: none;
+  margin-top: 15px;
+}
+.App-header-link:hover {
+  color: rgba(255,255,255,0.8)
+}
+.App-header-link:focus {
+  animation: jello-horizontal 0.9s both;
+  color:#0d6efd;
+  transition: color 0.9s;
+}
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* FIN ANIMATION LOGO ET LINK HEADER */
+
+
+/* DEBUT ANIMATION LINK FOOTER */
+.App-footer-link {
+  color: #444;
+  text-decoration: none;
+}
+.App-footer-link:hover {
+  color: rgba(26.7,26.7,26.7,0.8)
+}
+.App-footer-link:focus {
+  color: #0d6efd;
+}
+/* FIN ANIMATION LINK FOOTER */
+
+
+/* DEBUT CSS COMMUN A TOUTES LES PAGES */
+.hamburger {
+  color: #eee;
+}
+
+.pages-header {
+  background-image: url(./img/digital.jpg);
+  /* background-repeat: no-repeat; */
+  object-fit: cover;
+  min-height: 25vh;
+}
+
+.titre-color {
+  color: #1e1e1e;
+}
+
+.text-color {
+  color:#444;
+}
+/* FIN CSS COMMUN A TOUTES LES PAGES */
+
+
+/* DEBUT CSS PAGE ACCUEIL */
+.background-header {
+  background-image: url(./img/digital.jpg);
+  /* background-repeat: no-repeat; */
+  min-height: 100vh; 
+}
+
+.filtre-header {
+  background-color: rgba(0,0,0,0.3);
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* FIN CSS PAGE ACCUEIL */
+
+
+/* DEBUT CSS PAGE SERVICE */
+.icon-color {
+  color:#0d6efd;
+}
+.icon-color:hover {
+  color: #cde1f8
+}
+/* FIN CSS PAGE SERVICE */
+
+
+/* DEBUT CSS PAGE CONTACT */
+.background-main {
+  background-image: url(./img/digital.jpg);
+  /* background-repeat: no-repeat; */
+  min-height: 100vh; 
+  margin-top: 85px;
+}
+
+.filtre-main {
+  background-color: rgba(0,105,255,0.5);
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+iframe {
+  border: 1px solid black;
+  width: 100%; /* priorité sur la largeur définie avec l'attribut HTML width */
+}
+/* FIN CSS PAGE CONTACT */
+
+
 
 
 
