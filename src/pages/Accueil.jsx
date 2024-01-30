@@ -1,5 +1,5 @@
 import TextClock from "../components/TextClock";
-import Profil from "../components/ProfilGitHub";
+// import Profil from "../components/ProfilGitHub";
 
 import PhotoDev from "../img/photo_julien_deschamps.jpg";
 import Curriculum from "../documents/curriculum.pdf";
@@ -102,9 +102,7 @@ export default function Accueil() {
                     </a>
 
                     {/* <div className="row row-cols-1 row-cols-md-2 g-4">
-                        
-                            <Profil />
-                            
+                        <Profil />
                     </div> */}
 
                 </div>
