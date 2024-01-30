@@ -119,8 +119,18 @@ export default function App() {
             <p className="text-light fs-3">Copyright 2024</p>
           </div>
         </div>
-
       </footer>
+
+
+
+        {/* <div className="space"></div>
+        <div data-aos="fade-up" class="anime"></div>
+        <div className="space"></div>
+        <div className="anime"></div>
+        <div className="space"></div> */}
+
+
+
     </div>
   );
 }
