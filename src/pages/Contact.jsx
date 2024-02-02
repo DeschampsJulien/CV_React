@@ -3,7 +3,7 @@ import Formulaire from "../components/Formulaire";
 export default function Contact() {
     return (
 
-        <main>
+        <main id="top-page">
 
             <div className="background-main">
                 <div className="filtre-main">
@@ -42,6 +42,7 @@ export default function Contact() {
                     </div> 
                 </div>   
             </div>
+            <a className="btn btn-primary btn-lg rounded-circle float-end mx-4 mt-4" href="#top-page"><i className="fa-solid fa-arrow-up"></i></a>
         </main>
     );
 }

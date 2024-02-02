@@ -1,10 +1,10 @@
 export default function Services() {
     return (
         
-        <main>
+        <main id="top-page">
 
             <section className="pages-header"></section>
-
+           
             <div className="container text-center p-3">
 
                 <h2 className="text-uppercase mt-5"><strong>Mon offre de services</strong></h2>
@@ -45,6 +45,7 @@ export default function Services() {
                     </div>
                 </div>
             </div>
+            <a className="btn btn-primary btn-lg rounded-circle float-end mx-4 mt-4" href="#top-page"><i className="fa-solid fa-arrow-up"></i></a>
         </main>
     );
 }

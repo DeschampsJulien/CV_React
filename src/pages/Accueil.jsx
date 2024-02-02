@@ -1,13 +1,14 @@
 import TextClock from "../components/TextClock";
-// import Profil from "../components/ProfilGitHub";
+import ProfilGitHub from "../components/ProfilGitHub";
 
 import PhotoDev from "../img/photo_julien_deschamps.jpg";
 import Curriculum from "../documents/curriculum.pdf";
 
 
 export default function Accueil() {
+
     return (
-        <main>
+        <main id="top-page">
 
             <section className="background-header mx-auto">
                 <div className="filtre-header">
@@ -20,7 +21,7 @@ export default function Accueil() {
                         <a className="btn btn-primary btn-lg" href="#apropos">En savoir plus</a>
                 </div>
             </section>
-        
+            
             <section id="apropos" className="text-center py-5 px-1 mt-4">
                 <div className="container">
                     
@@ -73,7 +74,7 @@ export default function Accueil() {
 
                         {/* SUPRESSION DE LA BALISE "HR" DE MD A XXL */}
                         {/* <hr className="d-md-none d-lg-none d-xl-none d-xxl-none"/> */}
-                        
+  
                         <article className="col-md-6">
 
                             <div className="card p-4 m-2 bg-light text-center text-break border rounded">
@@ -100,13 +101,12 @@ export default function Accueil() {
                     <a className="btn btn-primary btn-lg btn-outline-light m-5" href={Curriculum} target="_blank" rel="noopener noreferrer">
                         <i className="fa-solid fa-download"></i> Téléchargez mon CV
                     </a>
-
-                    {/* <div className="row row-cols-1 row-cols-md-2 g-4">
-                        <Profil />
-                    </div> */}
-
+                    <hr />
                 </div>
             </section>
+            {/* IMPORTATION DU COMPONENT "ProfilGitHub" */}
+            <ProfilGitHub />
+            <a className="btn btn-primary btn-lg rounded-circle float-end mx-4 mt-4" href="#top-page"><i className="fa-solid fa-arrow-up"></i></a>
         </main>
     );
 }

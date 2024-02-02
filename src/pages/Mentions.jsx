@@ -1,6 +1,6 @@
 export default function Mentions() {
     return (
-        <main>
+        <main id="top-page">
 
             <section className="pages-header"></section>
 
@@ -60,6 +60,7 @@ export default function Mentions() {
                     </div>
                 </div>
             </div>
+            <a className="btn btn-primary btn-lg rounded-circle float-end mx-4 mt-4" href="#top-page"><i className="fa-solid fa-arrow-up"></i></a>
         </main>
     );
 }

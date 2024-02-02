@@ -1,54 +1,57 @@
-import React, { useState, useEffect} from "react"; 
- 
+import React, { useEffect, useState } from "react"; 
 
-export default function Profil() { 
+export default function ProfilGitHub() { 
 
-  // MAIN Liste des utilisateurs GitHub
-  const [users, setUsers] = useState([]); 
+  const [user, setUser] = useState([]); 
 
-  const getUsers = async () => {     
-    const res = await fetch("https://api.github.com/users");     
+  const getUser = async () => {     
+    const res = await fetch("https://api.github.com/users/github-john-doe");     
     const json = await res.json();     
-    // On stocke le résultat dans le state     
-    setUsers(json);   
+         
+    setUser(json);   
   };   
 
   useEffect(() => {     
-    getUsers();   
+    getUser();
   }, []);   
+
+
+
+  const [avatar, setAvatar] = useState([]); 
+
+  const getAvatar = async () => {     
+    const res = await fetch("https://avatars.githubusercontent.com/u/19842736?v=4");     
+    const json = await res.json();     
+         
+    setAvatar(json);   
+  };   
+
+  useEffect(() => {     
+    getAvatar();
+  }, []); 
   
+
+
+  return (  
     
-  return (     
-        
-      // <div>         
-      //   {users.map((user) => (           
-      //     <article key={user.id} className="card">             
-      //       <h2>{user.login}</h2>             
-      //       <img src={user.avatar_url} alt="{user.login}" />             
-      //       <p>               
-      //         <a href="{user.html_url}" target="_blank">                 
-      //           {user.html_url}               
-      //         </a>            
-      //       </p>           
-      //     </article>         
-      //   ))}       
-      // </div>  
+    <div className="text-center text-break bg-light border rounded mx-md-5 mx-4">
+     
+        <h3 className="titre-color m-4">Utilisateur GitHub</h3>
+     
+      <div className="text-color m-4">
+          <p className="my-4 mx-2 fs-3">{user.name}</p>
 
-          <div>         
-            {users.map((user) => (           
-              <article key={user.id} className="card">             
-                <h2>{user.login}</h2>             
-                <img src={user.avatar_url} alt="{user.login}" />             
-                <p>               
-                  <a href="{user.html_url}" target="_blank">                 
-                    {user.html_url}               
-                  </a>            
-                </p>           
-              </article>         
-            ))}       
-          </div>
+          <p className="my-4 mx-2">{user.avatar_url}</p>
+          <div className="my-4 mx-2">{<img src="avatar" alt="" />}</div>
+          <img src="https://avatars.githubusercontent.com/u/19842736?v=4" alt="Avatar John Doe" />
 
-      
-      
+          <p className="my-4 mx-2">{user.bio}</p>
+          <p className="my-4 mx-2">Abonnés: {user.followers}</p>
+          <p className="my-4 mx-2">Abonnements: {user.following}</p>
+          <p className="my-4 mx-2">Créé le: {user.created_at}</p>
+          <p className="my-4 mx-2">Modifié le: {user.updated_at}</p>
+          <p className="my-4 mx-2">URL repositories:{user.repos_url}</p>
+      </div>
+    </div>
   );
 } 

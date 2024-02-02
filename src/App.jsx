@@ -1,6 +1,6 @@
 import './App.css';
 import Logo from "./logo.svg";
-
+import ScrollToTop from "./components/ScrollTotop";
 
 
 // IMPORTATION DES MODULES POUR LE ROUTAGE
@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div className="App">
       
-      <header className="bg-dark navbar navbar-expand-lg text-uppercase fixed-top" id="toppage">
+      <header className="bg-dark navbar navbar-expand-lg text-uppercase fixed-top">
         <div className="container-fluid">
           <a className="navbar-brand mx-2" href="#top-page">
             <Link to="/" className="nav-link text-start py-1 py-lg-1 px-0 px-lg-1 fs-5 list-group-item list-group-item-action"><p className="App-header-logo" tabindex="0"><img src={Logo} className="App-logo" alt="logo" />Julien Deschamps</p></Link>
@@ -52,7 +52,8 @@ export default function App() {
         <Route path="/Contact" element={<Contact />}></Route>
         <Route path="/Mentions" element={<Mentions />}></Route>
       </Routes>  
-           
+      <ScrollToTop />
+      
       <footer className="bg-light pt-4 mt-5">
         <div className="container">
           <div className="row">
@@ -123,10 +124,10 @@ export default function App() {
         <div className="col mt-4">
           <div className="bg-dark text-center p-3">
             <p className="text-light fs-3">Copyright 2024</p>
-            <a className="btn btn-primary btn-lg" href="#toppage">Top page</a>
           </div>
         </div>
       </footer>   
+
     </div>
   );
 }
