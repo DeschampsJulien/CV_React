@@ -16,22 +16,6 @@ export default function ProfilGitHub() {
   }, []);   
 
 
-
-  const [avatar, setAvatar] = useState([]); 
-
-  const getAvatar = async () => {     
-    const res = await fetch("https://avatars.githubusercontent.com/u/19842736?v=4");     
-    const json = await res.json();     
-         
-    setAvatar(json);   
-  };   
-
-  useEffect(() => {     
-    getAvatar();
-  }, []); 
-  
-
-
   return (  
     
     <div className="text-center text-break bg-light border rounded mx-md-5 mx-4">
@@ -39,11 +23,12 @@ export default function ProfilGitHub() {
         <h3 className="titre-color m-4">Utilisateur GitHub</h3>
      
       <div className="text-color m-4">
+        
+          {/* RECUPERATION D'UN TEXTE */}
           <p className="my-4 mx-2 fs-3">{user.name}</p>
 
-          <p className="my-4 mx-2">{user.avatar_url}</p>
-          <div className="my-4 mx-2">{<img src="avatar" alt="" />}</div>
-          <img src="https://avatars.githubusercontent.com/u/19842736?v=4" alt="Avatar John Doe" />
+          {/* RECUPERATION D'UNE IMAGE */}
+          <div className="my-4 mx-2">{<img className="img-fluid" src={user.avatar_url} alt="Avatar John Doe" />}</div>
 
           <p className="my-4 mx-2">{user.bio}</p>
           <p className="my-4 mx-2">Abonnés: {user.followers}</p>

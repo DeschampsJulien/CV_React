@@ -15,7 +15,7 @@ export default function Services() {
 
                     <div className="icon-color col-lg-4 col-md-6">
                         <div className="p-4 m-2 bg-light text-center text-break border rounded">
-                            <i class="fa-solid fa-computer fa-3x m-3"></i>
+                            <i className="fa-solid fa-computer fa-3x m-3"></i>
                             <h3 className="titre-color text-uppercase">UX design</h3>
                             <p className="text-color">
                                 L'<strong>UX Design</strong> est une méthode de conception centrée sur l'utilisateur. 
@@ -26,7 +26,7 @@ export default function Services() {
 
                     <div className="icon-color col-lg-4 col-md-6">
                         <div className="p-4 m-2 bg-light text-center text-break border rounded">
-                        <i class="fa-regular fa-file-code fa-3x m-3"></i>
+                            <i className="fa-regular fa-file-code fa-3x m-3"></i>
                             <h3 className="titre-color text-uppercase">Développement Web</h3>
                             <p className="text-color">
                                 Le <strong>développement de sites web</strong> repose sur l'utilisation des langages <code>HTML</code>, <code>CSS</code>, JavaScript et <code>PHP</code>.
@@ -36,7 +36,7 @@ export default function Services() {
 
                     <div className="icon-color col-lg-4 col-md-6">
                         <div className="p-4 m-2 bg-light text-center text-break border rounded">
-                            <i class="fa-solid fa-magnifying-glass fa-3x m-3"></i>
+                            <i className="fa-solid fa-magnifying-glass fa-3x m-3"></i>
                             <h3 className="titre-color text-uppercase">Référencement</h3>
                             <p className="text-color">
                                 Le <strong>référencement naturel d'un site,</strong> aussi appelé <code>SEO</code> consiste à mettre des techniques en oeuvre pour amélirer sa position dans les résultats des moteurs de recherche.

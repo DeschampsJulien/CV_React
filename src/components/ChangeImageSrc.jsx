@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function App() {
+export default function ChangeImageSrc() {
   const [imageSrc, setImageSrc] = useState('initial-image-src.jpg');
 
   // Function to change the image source

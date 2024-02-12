@@ -13,20 +13,19 @@ import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
 
 
-
-
 export default function App() {
-
- 
   
   return (
     <div className="App">
       
       <header className="bg-dark navbar navbar-expand-lg text-uppercase fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand mx-2" href="#top-page">
-            <Link to="/" className="nav-link text-start py-1 py-lg-1 px-0 px-lg-1 fs-5 list-group-item list-group-item-action"><p className="App-header-logo" tabindex="0"><img src={Logo} className="App-logo" alt="logo" />Julien Deschamps</p></Link>
-          </a>
+
+          <div className="d-flex flex-row navbar-brand mx-2">
+            <a className="d-flex align-items-center" href="#top-page"><img src={Logo} className="App-logo" alt="logo" /></a>
+            {/* tabIndex est un attribut global qui permet à un élément HTML de recevoir le focus. */}
+            <Link to="/" className="nav-link text-start py-1 py-lg-1 px-0 px-lg-1 fs-5 list-group-item list-group-item-action"><p className="App-header-logo" tabIndex="0">Julien Deschamps</p></Link>
+          </div>
           
           <div className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <i className="hamburger fa-solid fa-bars fa-2x" aria-hidden="true"></i> 
@@ -34,11 +33,11 @@ export default function App() {
   
           <div className="collapse navbar-collapse" id="navbarResponsive">
               <ul className="navbar-nav ms-auto">
-                  <li className="nav-item mx-0 mx-lg-1"><Link to="/" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabindex="0">Accueil</p></Link></li>
-                  <li className="nav-item mx-0 mx-lg-1"><Link to="/Services" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabindex="0">Services</p></Link></li>
-                  <li className="nav-item mx-0 mx-lg-1"><Link to="/Realisations" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabindex="0">Réalisations</p></Link></li>
-                  <li className="nav-item mx-0 mx-lg-1"><Link to="/Blog" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabindex="0">Blog</p></Link></li>
-                  <li className="nav-item mx-0 mx-lg-1"><Link to="/Contact" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabindex="0">Contact</p></Link></li>
+                  <li className="nav-item mx-0 mx-lg-1"><Link to="/" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Accueil</p></Link></li>
+                  <li className="nav-item mx-0 mx-lg-1"><Link to="/Services" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Services</p></Link></li>
+                  <li className="nav-item mx-0 mx-lg-1"><Link to="/Realisations" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Réalisations</p></Link></li>
+                  <li className="nav-item mx-0 mx-lg-1"><Link to="/Blog" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Blog</p></Link></li>
+                  <li className="nav-item mx-0 mx-lg-1"><Link to="/Contact" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Contact</p></Link></li>
               </ul>
           </div>
         </div>
@@ -52,6 +51,8 @@ export default function App() {
         <Route path="/Contact" element={<Contact />}></Route>
         <Route path="/Mentions" element={<Mentions />}></Route>
       </Routes>  
+
+      {/* Component qui permet de remonter en haut de la page sélectionné */}
       <ScrollToTop />
       
       <footer className="bg-light pt-4 mt-5">
@@ -59,7 +60,7 @@ export default function App() {
           <div className="row">
 
             <div className="col-lg-3 col-md-6">
-              <div className="p-4 p-lg-3 p-xl-4 m-2 text-left text-break border border-dark rounded">
+              <div className="p-4 p-lg-3 p-xl-4 m-2 text-left text-break">
                 <address>
                   <h4 className="titre-color text-uppercase">Julien Deschamps</h4>
                   <p className="fs-6"><a className="text-color" href="https://www.google.com/search?q=62+boulevard+victor+hugo+frontignan&rlz=1C1GCEA_enFR1058FR1058&oq=62+boulevard+victor+hugo+34110fron&gs_lcrp=EgZjaHJvbWUqCQgBECEYChigATIGCAAQRRg5MgkIARAhGAoYoAEyCQgCECEYChigATIJCAMQIRgKGKABMgkIBBAhGAoYoAHSAQkxNjQ5OGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">62 Boulevard Victor Hugo 34110 Frontignan</a></p>
@@ -67,7 +68,7 @@ export default function App() {
                   <p className="fs-6"><a className="text-color" href="tel:0625047486">0625047486</a></p>
                   <div>
                     <a className="m-2" href="https://www.linkedin.com/in/julien-deschamps-a670a567" target="_blank" rel="noopener noreferrer">
-                      <i class="fa-brands fa-linkedin fa-2x"></i>
+                      <i className="fa-brands fa-linkedin fa-2x"></i>
                     </a>
 
                     <a className="m-2" href="https://www.facebook.com/julien.deschamps.1675" target="_blank" rel="noopener noreferrer">
@@ -83,38 +84,38 @@ export default function App() {
             </div>
             
             <div className="col-lg-3 col-md-6">
-              <div className="p-4 p-lg-3 p-xl-4 m-2  text-left text-break border border-dark rounded">
+              <div className="p-4 p-lg-3 p-xl-4 m-2  text-left text-break">
                 <h4 className="titre-color text-uppercase">Liens Utiles</h4>
                 <ul className="navbar-nav ms-auto">  
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Accueil</Link></li>
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/Services" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Services</Link></li>
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/Contact" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Contact</Link></li>
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/Mentions" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Mentions légales</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Accueil</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/Services" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Services</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/Contact" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Contact</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/Mentions" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Mentions légales</Link></li>
                 </ul>
               </div>
             </div>
 
             <div className="col-lg-3 col-md-6">
-              <div className="p-4 p-lg-3 p-xl-4 m-2 text-left text-break border border-dark rounded">
+              <div className="p-4 p-lg-3 p-xl-4 m-2 text-left text-break">
                 <h4 className="titre-color fs-4 text-uppercase">Mes Réalisations</h4>
                 <ul className="navbar-nav ms-auto">
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/Realisations" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Apprendre en ligne</Link></li>
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/Realisations" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Projet PortFolio</Link></li>
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/Realisations" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Tutoriel HTML/CSS</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/Realisations" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Apprendre en ligne</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/Realisations" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Projet PortFolio</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/Realisations" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Tutoriel HTML/CSS</Link></li>
                 </ul>
               </div>
             </div>
 
             <div className="col-lg-3 col-md-6">
-              <div className="p-4 p-lg-3 p-xl-4 m-2 text-left text-break border border-dark rounded">
+              <div className="p-4 p-lg-3 p-xl-4 m-2 text-left text-break">
                 <h4 className="titre-color fs-4 text-uppercase">Mes Articles</h4>
                 <ul className="navbar-nav ms-auto">
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/Blog" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Coder sont site en HTML et CSS</Link></li>
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/Blog" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Vendre un produit sur le Web</Link></li>
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/Blog" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Se positionner sur Google</Link></li>
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/Blog" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Coder en responsive design</Link></li>
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/Blog" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Techniques de référencement</Link></li>
-                  <li className="nav-item m-1 mx-lg-1"><Link to="/Blog" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabindex="0"></i> Apprendre à coder</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/Blog" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Coder sont site en HTML et CSS</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/Blog" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Vendre un produit sur le Web</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/Blog" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Se positionner sur Google</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/Blog" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Coder en responsive design</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/Blog" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Techniques de référencement</Link></li>
+                  <li className="nav-item m-1 mx-lg-1"><Link to="/Blog" className="App-footer-link fs-6 m-1"><i className="fa fa-chevron-right" aria-hidden="true" tabIndex="0"></i> Apprendre à coder</Link></li>
                 </ul>
               </div>
             </div>

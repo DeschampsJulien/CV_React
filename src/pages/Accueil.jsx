@@ -50,7 +50,7 @@ export default function Accueil() {
                                 </div>
                                 <p className="text-color text-start fs-5">HTML 90%</p>
                                 
-                                <div class="progress">
+                                <div className="progress">
                                     <div className="progress-bar bg-info" role="progressbar" style={{width: '80%' }} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <p className="text-color text-start fs-5">CSS 80%</p>

@@ -1,23 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, {Component} from "react";
 
-export default function TextClock() {
-  
-  const [currentDate, setDate] = useState(new Date());
-  const refresh = () => {
-    setDate(new Date());
-  };
+export default class TextClock extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      date: new Date(),
+    };
+  }
 
-  useEffect(() => {
-    refresh();
-  });
+  componentDidMount() {
+    this.timerID = setInterval (() => this.tictac(), 1000);
+    // console.log(this)
+  }
 
-  return (
-    <div>
-      <p className="text-uppercase text-center text-break m-4 fs-3">
-        Nous sommes le&nbsp;
-        <span>{currentDate.toLocaleDateString()}</span> et il est{" "}
-        <span>{currentDate.toLocaleTimeString()}</span>
-      </p>
-    </div>
-  );
+  componentWillUnmount() {
+    clearInterval(this.timeID)
+  }
+
+  tictac() {
+    this.setState({
+      date: new Date()
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <p className="text-uppercase text-center text-break m-4 fs-3">
+          On est le {this.state.date.toLocaleDateString()} Il est {this.state.date.toLocaleTimeString()}
+        </p>
+      </div>
+    )
+  }
 }

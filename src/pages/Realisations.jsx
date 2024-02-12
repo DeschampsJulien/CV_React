@@ -25,7 +25,7 @@ export default function Realisation() {
 								<button type="button" className="btn btn-outline-primary btn-lg">Découvrir</button>
 							</div>
 							<div className="card-footer">
-								<small class="text-muted">Réalisation au Centre Européen de Formation</small>
+								<small className="text-muted">Réalisation au Centre Européen de Formation</small>
 							</div>
 						</div>
 					</div>
@@ -51,7 +51,7 @@ export default function Realisation() {
 								<button type="button" className="btn btn-outline-primary btn-lg">Découvrir</button>
 							</div>
 							<div className="card-footer">
-								<small class="text-muted">Réalisation HTML/CSS</small>
+								<small className="text-muted">Réalisation HTML/CSS</small>
 							</div>
 						</div>
 					</div>
