@@ -33,11 +33,11 @@ export default function App() {
   
           <div className="collapse navbar-collapse" id="navbarResponsive">
               <ul className="navbar-nav ms-auto">
-                  <li className="nav-item mx-0 mx-lg-1"><Link to="/" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Accueil</p></Link></li>
-                  <li className="nav-item mx-0 mx-lg-1"><Link to="/Services" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Services</p></Link></li>
-                  <li className="nav-item mx-0 mx-lg-1"><Link to="/Realisations" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Réalisations</p></Link></li>
-                  <li className="nav-item mx-0 mx-lg-1"><Link to="/Blog" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Blog</p></Link></li>
-                  <li className="nav-item mx-0 mx-lg-1"><Link to="/Contact" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Contact</p></Link></li>
+                  <li className="nav-item mx-0 mx-lg-1" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"><Link to="/" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Accueil</p></Link></li>
+                  <li className="nav-item mx-0 mx-lg-1" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" ><Link to="/Services" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Services</p></Link></li>
+                  <li className="nav-item mx-0 mx-lg-1" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"><Link to="/Realisations" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Réalisations</p></Link></li>
+                  <li className="nav-item mx-0 mx-lg-1" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"><Link to="/Blog" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Blog</p></Link></li>
+                  <li className="nav-item mx-0 mx-lg-1" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"><Link to="/Contact" className="nav-link px-4 px-lg-3 fs-5"><p className="App-header-link" tabIndex="0">Contact</p></Link></li>
               </ul>
           </div>
         </div>

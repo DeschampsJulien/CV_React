@@ -11,10 +11,10 @@ export default function Services() {
                 <p className="text-color text-uppercase mb-5 fs-6" >Voici les prestations sur lesquelles je peux intervenir.</p>
                 <hr />
 
-                <div className="row row-cols-1 row-cols-md-3 g-4">
+                <div className="vh-50 row row-cols-1 row-cols-md-3 g-4">
 
                     <div className="icon-color col-lg-4 col-md-6">
-                        <div className="p-4 m-2 bg-light text-center text-break border rounded">
+                        <div className="h-100 p-4 m-2 bg-light text-center text-break border rounded">
                             <i className="fa-solid fa-computer fa-3x m-3"></i>
                             <h3 className="titre-color text-uppercase">UX design</h3>
                             <p className="text-color">
@@ -25,7 +25,7 @@ export default function Services() {
                     </div>
 
                     <div className="icon-color col-lg-4 col-md-6">
-                        <div className="p-4 m-2 bg-light text-center text-break border rounded">
+                        <div className="h-100 p-4 m-2 bg-light text-center text-break border rounded">
                             <i className="fa-regular fa-file-code fa-3x m-3"></i>
                             <h3 className="titre-color text-uppercase">Développement Web</h3>
                             <p className="text-color">
@@ -35,7 +35,7 @@ export default function Services() {
                     </div>
 
                     <div className="icon-color col-lg-4 col-md-6">
-                        <div className="p-4 m-2 bg-light text-center text-break border rounded">
+                        <div className="h-100 p-4 m-2 bg-light text-center text-break border rounded">
                             <i className="fa-solid fa-magnifying-glass fa-3x m-3"></i>
                             <h3 className="titre-color text-uppercase">Référencement</h3>
                             <p className="text-color">

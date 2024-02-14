@@ -1,5 +1,6 @@
 import TextClock from "../components/TextClock";
 import ProfilGitHub from "../components/ProfilGitHub";
+import Carousel from "../components/Carousel";
 
 import PhotoDev from "../img/photo_julien_deschamps.jpg";
 import Curriculum from "../documents/curriculum.pdf";
@@ -10,7 +11,7 @@ export default function Accueil() {
     return (
         <main id="top-page">
 
-            <section className="background-header mx-auto">
+            <section className="background-header">
                 <div className="filtre-header">
 
                         {/* IMPORTATION DU COMPONENT "TextClock" */}
@@ -42,6 +43,9 @@ export default function Accueil() {
                                 </p>
                                 
                                 <hr />
+                                <Carousel />
+                                <hr />
+
 
                                 <h3 className="titre-color m-4">Mes compétances</h3>
                                 
@@ -69,7 +73,10 @@ export default function Accueil() {
                                     <div className="progress-bar bg-success" role="progressbar" style={{width: '40%' }} aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                                 <p className="text-color text-start fs-5">React 40%</p>
+                                
                             </div>  
+
+                            
                         </article>
 
                         {/* SUPRESSION DE LA BALISE "HR" DE MD A XXL */}
